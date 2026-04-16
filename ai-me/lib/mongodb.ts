@@ -2,12 +2,6 @@ import mongoose from "mongoose";
 
 const MONGO_URI = process.env.MONGO_URI as string;
 
-if (!MONGO_URI) {
-  throw new Error(
-    "Please define the MONGO_URI environment variable in .env.local"
-  );
-}
-
 /**
  * Global cache to prevent multiple connections during Next.js hot-reload in development.
  * In production, module-level state is fresh per serverless invocation.
@@ -24,6 +18,12 @@ const cached = global._mongooseCache ?? { conn: null, promise: null };
 global._mongooseCache = cached;
 
 export async function connectDB(): Promise<typeof mongoose> {
+  if (!MONGO_URI) {
+    throw new Error(
+      "Please define the MONGO_URI environment variable in .env.local or your deployment dashboard"
+    );
+  }
+
   if (cached.conn) {
     console.log("♻️  Using existing MongoDB connection");
     return cached.conn;

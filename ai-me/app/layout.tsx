@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rajesh-ai.vercel.app"), // Replace with your actual domain when ready
   title: "Rajesh P | Senior Product Engineer & AI Architect",
   description: "Ultra-premium personal portfolio of Rajesh P, featuring an interactive AI assistant.",
 };
