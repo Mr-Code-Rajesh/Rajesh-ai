@@ -1,0 +1,261 @@
+{
+  "name": "Rajesh P",
+  "title": "Co-Founder & Frontend Engineer | AI Product Builder",
+  "location": "Chennai, India",
+  "email": "rajeshai.code@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/code-rajesh/",
+  "github": "https://github.com/Mr-Code-Rajesh",
+  "tagline": "I build products from ideas — and turn them into real, usable systems.",
+  "summary": "I am a growth-minded frontend engineer and AI product builder who celebrates 1% daily improvements. I specialize in turning complex ideas into functional, production-ready systems, with a focus on clean architecture and high-end user experiences.",
+  "about": "I am a disciplined solo builder who believes in 'building in public' and sharing my journey openly. I am honest about my failures and proactive about helping others. My journey from a B.Sc. graduate to a Co-Founder and Research Executive has been fueled by sheer determination and a passion for AI systems.",
+  "skills_tabs": {
+    "frontend": [
+      {
+        "name": "React",
+        "usage": "Web Architecture",
+        "icon": "Layout"
+      },
+      {
+        "name": "Next.js",
+        "usage": "SSR & Fullstack Apps",
+        "icon": "Layers"
+      },
+      {
+        "name": "TypeScript",
+        "usage": "Enterprise-grade safety",
+        "icon": "ShieldCheck"
+      },
+      {
+        "name": "JavaScript",
+        "usage": "Complex logic & APIs",
+        "icon": "Code2"
+      },
+      {
+        "name": "Tailwind",
+        "usage": "Rapid UI System",
+        "icon": "Palette"
+      },
+      {
+        "name": "Framer Motion",
+        "usage": "High-end Microinteractions",
+        "icon": "Zap"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js",
+        "usage": "Async Scalable Servers",
+        "icon": "Server"
+      },
+      {
+        "name": "Express",
+        "usage": "RESTful API Design",
+        "icon": "Route"
+      },
+      {
+        "name": "MongoDB",
+        "usage": "NoSQL Data Solutions",
+        "icon": "Database"
+      },
+      {
+        "name": "Redis",
+        "usage": "Real-time Caching",
+        "icon": "Activity"
+      },
+      {
+        "name": "Bull Queue",
+        "usage": "Background Job Systems",
+        "icon": "Boxes"
+      }
+    ],
+    "ai_automation": [
+      {
+        "name": "Gemini API",
+        "usage": "Intelligent Reasoning",
+        "icon": "Brain"
+      },
+      {
+        "name": "Prompt Engineering",
+        "usage": "Structured Data Extraction",
+        "icon": "Terminal"
+      },
+      {
+        "name": "Serper API",
+        "usage": "Live Web Intelligence",
+        "icon": "Globe"
+      },
+      {
+        "name": "Workflow Automation",
+        "usage": "Process Streamlining",
+        "icon": "Workflow"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git",
+        "usage": "Version Control",
+        "icon": "GitBranch"
+      },
+      {
+        "name": "Vercel",
+        "usage": "Production Hosting",
+        "icon": "Cloud"
+      },
+      {
+        "name": "Postman",
+        "usage": "API Architecture",
+        "icon": "Send"
+      },
+      {
+        "name": "Netlify",
+        "usage": "Deployment",
+        "icon": "Zap"
+      },
+      {
+        "name": "Render",
+        "usage": "Cloud Platform",
+        "icon": "Cpu"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Co-Founder & Frontend Engineer",
+      "company": "Liceron Technologies",
+      "duration": "Dec 2025 – Present",
+      "highlights": [
+        "Built and launched LucidExtractor from 0→1 in ~4 months",
+        "Led end-to-end product: research, architecture, frontend, launch",
+        "Stack: React, TypeScript, Tailwind, Node.js, MongoDB"
+      ]
+    },
+    {
+      "role": "Research Executive (Technical)",
+      "company": "Zinnov",
+      "duration": "May 2023 – Present",
+      "highlights": [
+        "Built AI-powered Data Cleanup Platform (production SaaS tool)",
+        "Automated workflows, handled team + client deliverables, project management",
+        "Stack: Next.js, Gemini API, Redis Cloud, Bull Queue, MongoDB, Node.js",
+        "Awards: Zinnov Dashing Debut Award (2024), Extra Mile Award (2025)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "LucidExtractor",
+      "subtitle": "AI-powered web scraping + SEO platform",
+      "description": "Helping developers extract structured data from dynamic and bot-protected websites with precision.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "MongoDB",
+        "Auth.js"
+      ],
+      "problem": "Traditional scrapers fail against JS-rich sites and anti-bot systems.",
+      "solution": "Built a headless browser API with rotation logic and AI-based structured formatting.",
+      "impact": "Launched 0→1 as a SaaS. Reduced data curation time by 80% for initial users.",
+      "status": "LIVE",
+      "link": "https://lucidextractor.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "AI Data Cleanup Platform",
+      "subtitle": "Enterprise data verification tool",
+      "description": "Production tool for scale verification of messy software product datasets across multiple data sources.",
+      "tech": [
+        "Next.js",
+        "Gemini",
+        "Redis",
+        "Bull Queue",
+        "Zod"
+      ],
+      "problem": "Handling 10k+ rows of messy vendor data was manual and error-prone.",
+      "solution": "Implemented a background job queue (Bull) with LLM grounding (Gemini) for 99% accuracy.",
+      "impact": "Production-grade internal tool currently streamlining Zinnov's product research.",
+      "status": "PRODUCTION",
+      "link": "https://zinnov.com",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "Saktrix UI Library",
+      "subtitle": "240+ open-source React components",
+      "description": "A comprehensive UI standard featuring highly performant and accessible web components.",
+      "tech": [
+        "React",
+        "Tailwind",
+        "Framer Motion",
+        "Vite"
+      ],
+      "problem": "Development teams waste thousands of hours rewriting common UI patterns.",
+      "solution": "Created a lightweight, copy-paste standard with 240+ components and deep animation hooks.",
+      "impact": "Open-source contribution with 10k+ potential component variations.",
+      "status": "OPEN SOURCE",
+      "link": "https://saktrix.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh/Saktrix-UI"
+    },
+    {
+      "name": "Jayam E-Commerce",
+      "subtitle": "Full-stack shopping app",
+      "description": "An end-to-end shopping experience featuring advanced inventory and order management.",
+      "tech": [
+        "React",
+        "Firebase",
+        "Zustand",
+        "Cloudinary"
+      ],
+      "problem": "E-commerce apps often struggle with state management and real-time stock sync.",
+      "solution": "Leveraged Firestore real-time listeners and Zustand for lightning-fast UI updates.",
+      "impact": "Successfully handled 100+ simulated concurrent orders during stress testing.",
+      "status": "COMPLETED",
+      "link": "https://jayam-ecommerce.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "CNAPP Dashboard",
+      "subtitle": "Dynamic cloud security dashboard",
+      "description": "Visualizing complex security metrics and vulnerability scans in a clean, widget-based UI.",
+      "tech": [
+        "React",
+        "Vite",
+        "Zustand",
+        "Tailwind"
+      ],
+      "problem": "Security analysts are overwhelmed by messy, tabular log data.",
+      "solution": "Built a JSON-driven widget engine that converts raw logs into prioritized visual tasks.",
+      "impact": "Reduced security notification fatigue by filtering non-critical noise by 40%.",
+      "status": "COMPLETED",
+      "link": "https://cnapp-dashboard.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. Computer Science",
+      "institution": "Sri Sankara Arts and Science College",
+      "duration": "2020–2023",
+      "cgpa": "8.0"
+    }
+  ],
+  "achievements": [
+    "Zinnov Dashing Debut Award (2024)",
+    "Zinnov Extra Mile Award (2025)",
+    "Ninja Dominator — Coding Ninjas (Iron → Ninja Dominator in 49 days)",
+    "20+ skill certifications (HTML, CSS, JS, React)",
+    "Wadhwani Foundation Ignite Lite Program (entrepreneurship)",
+    "Saktrix UI Library — 240+ open-source React components"
+  ],
+  "personality": {
+    "traits": [
+      "Growth mindset",
+      "Honest & Transparent",
+      "Proactive helper",
+      "Disciplined solo builder"
+    ],
+    "style": "Building in public — shares journey openly.",
+    "fun_fact": "I treat every day as a 1% improvement challenge."
+  },
+  "availability": "Open to high-impact roles and innovative AI product building.",
+  "contact_cta": "I build products from ideas — let's turn yours into a real, usable system."
+}
