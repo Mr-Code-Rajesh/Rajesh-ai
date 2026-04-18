@@ -182,19 +182,6 @@ body {
   animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
 
-.cursor-glow {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-  background: radial-gradient(circle at var(--mouse-x, 0%) var(--mouse-y, 0%),
-      rgba(124, 58, 237, 0.15) 0%,
-      transparent 20%);
-  transition: opacity 0.3s ease;
-}
 
 .gradient-border-mask {
   position: relative;

@@ -29,12 +29,12 @@ export default function Hero() {
       setText(fullText.slice(0, i));
       i++;
       if (i > fullText.length) clearInterval(timer);
-    }, 50);
+    }, 30); // Faster typing
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-svh w-full px-6 text-center overflow-hidden bg-[#030303] text-white">
+    <section className="relative flex flex-col items-center justify-center min-h-svh w-full px-6 text-center overflow-hidden bg-[#030303] text-white cursor-none">
 
       {/* Layer 0: Performance Grids & Canvas */}
       <CyberGrid />
@@ -52,10 +52,10 @@ export default function Hero() {
 
         {/* Top Badges */}
         <div className="flex flex-wrap justify-center gap-3 mb-6">
-          <FeatureBadge icon={Cpu} text="AI Architect" delay={0.2} />
-          <FeatureBadge icon={Zap} text="Performance Driven" delay={0.3} />
-          <FeatureBadge icon={Code} text="SaaS Expert" delay={0.4} />
-          <FeatureBadge icon={ShieldCheck} text="Production Ready" delay={0.5} />
+          <FeatureBadge icon={Cpu} text="AI Architect" delay={0.1} />
+          <FeatureBadge icon={Zap} text="Performance Driven" delay={0.2} />
+          <FeatureBadge icon={Code} text="SaaS Expert" delay={0.3} />
+          <FeatureBadge icon={ShieldCheck} text="Production Ready" delay={0.4} />
         </div>
 
         {/* The Neural Core (Interactive) */}
@@ -66,38 +66,49 @@ export default function Hero() {
         >
           <motion.div
             animate={{
-              scale: isHovered ? 1.1 : 1,
+              scale: isHovered ? 1.15 : 1,
               rotate: isHovered ? 90 : 0,
               boxShadow: isHovered
-                ? "0 0 40px rgba(168, 85, 247, 0.4)"
+                ? "0 0 50px rgba(168, 85, 247, 0.6)"
                 : "0 0 20px rgba(168, 85, 247, 0.2)"
             }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="w-16 h-16 rounded-2xl bg-linear-to-br from-purple-500 via-[#00D1FF] to-[#00FF41] p-px cursor-pointer"
           >
-            <div className="w-full h-full rounded-2xl bg-black flex items-center justify-center overflow-hidden">
+            <motion.div
+              className="w-full h-full rounded-2xl bg-black flex items-center justify-center overflow-hidden"
+            >
               <motion.div
                 animate={{
-                  opacity: [0.5, 1, 0.5],
-                  scale: [1, 1.2, 1]
+                  opacity: isHovered ? [0.8, 1, 0.8] : [0.4, 0.7, 0.4],
+                  scale: isHovered ? [1.1, 1.3, 1.1] : [1, 1.1, 1]
                 }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="w-6 h-6 bg-white rounded-full blur-xs"
+                transition={{ duration: isHovered ? 1.5 : 3, repeat: Infinity }}
+                className="w-6 h-6 bg-white rounded-full blur-xs shadow-[0_0_15px_rgba(255,255,255,0.5)]"
               />
-            </div>
+            </motion.div>
           </motion.div>
-          {/* External Ring */}
+          {/* External Ring - Always rotates, faster on hover */}
           <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            className="absolute -inset-4 border border-dashed border-white/30 rounded-full"
+            animate={{
+              rotate: 360,
+              scale: isHovered ? 1.2 : 1,
+              opacity: isHovered ? 0.8 : 0.4
+            }}
+            transition={{
+              rotate: { duration: isHovered ? 4 : 10, repeat: Infinity, ease: "linear" },
+              scale: { duration: 0.5 }
+            }}
+            className="absolute -inset-4 border border-dashed border-white/40 rounded-full"
           />
         </motion.div>
 
         {/* Headline with Scanning Effect */}
         <div className="relative mb-6">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
             aria-label={fullText}
             className="text-5xl md:text-8xl font-black tracking-tighter leading-none"
           >
@@ -111,7 +122,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0.4 }}
             className="text-[#00FF41] font-mono text-[10px] md:text-xs mt-4 uppercase tracking-[0.5em]"
           >
             Initialising Rajesh AI Protocols...
@@ -120,9 +131,9 @@ export default function Hero() {
 
         {/* Subcopy */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 0.6 }}
           className="text-lg md:text-xl text-zinc-400 max-w-2xl balance mx-auto mb-12 leading-relaxed"
         >
           AI Full Stack Engineer crafting <span className="text-white font-medium">high-performance automation systems</span> and autonomous agents that scale with your vision.
@@ -130,9 +141,9 @@ export default function Hero() {
 
         {/* Actions */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center gap-6"
         >
           <a
@@ -168,3 +179,4 @@ export default function Hero() {
     </section>
   );
 }
+
