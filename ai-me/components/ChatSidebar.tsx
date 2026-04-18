@@ -45,8 +45,11 @@ export default function ChatSidebar({
   return (
     <motion.div
       initial={false}
-      animate={{ width: isCollapsed ? "80px" : "320px" }}
-      className="h-full bg-bg-dark border-r border-white/5 flex flex-col relative transition-all duration-500 ease-in-out z-50"
+      animate={{ 
+        width: isCollapsed ? (typeof window !== "undefined" && window.innerWidth < 1024 ? "0px" : "80px") : "320px",
+        x: isCollapsed && typeof window !== "undefined" && window.innerWidth < 1024 ? -320 : 0
+      }}
+      className={`h-full bg-bg-dark border-r border-white/5 flex flex-col fixed lg:relative transition-all duration-500 ease-in-out z-50 shadow-2xl lg:shadow-none`}
     >
       {/* Toggle Button */}
       <button

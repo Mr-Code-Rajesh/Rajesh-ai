@@ -6,15 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 interface MessageBubbleProps {
   role: "user" | "assistant";
   content: string;
+  shouldAnimate?: boolean;
 }
 
-export default function MessageBubble({ role, content }: MessageBubbleProps) {
+export default function MessageBubble({ role, content, shouldAnimate = true }: MessageBubbleProps) {
   const isUser = role === "user";
-  const [displayedContent, setDisplayedContent] = useState(isUser ? content : "");
-  const [isTypingComplete, setIsTypingComplete] = useState(isUser);
+  const [displayedContent, setDisplayedContent] = useState(isUser || !shouldAnimate ? content : "");
+  const [isTypingComplete, setIsTypingComplete] = useState(isUser || !shouldAnimate);
 
   useEffect(() => {
-    if (isUser) {
+    if (isUser || !shouldAnimate) {
       setDisplayedContent(content);
       setIsTypingComplete(true);
       return;
@@ -30,7 +31,7 @@ export default function MessageBubble({ role, content }: MessageBubbleProps) {
     let i = 0;
     setDisplayedContent("");
     setIsTypingComplete(false);
-    
+
     const interval = setInterval(() => {
       setDisplayedContent(content.slice(0, i + 1));
       i++;
@@ -50,22 +51,21 @@ export default function MessageBubble({ role, content }: MessageBubbleProps) {
       className={`flex w-full mb-4 ${isUser ? "justify-end" : "justify-start"}`}
     >
       <div
-        className={`max-w-[85%] px-5 py-4 rounded-3xl text-sm leading-relaxed relative overflow-hidden transition-all duration-300 ${
-          isUser
-            ? "bg-gradient-to-br from-brand-purple to-brand-pink text-white rounded-tr-none shadow-xl shadow-brand-purple/10"
-            : "glass-card text-zinc-200 rounded-tl-none border border-white/5"
-        }`}
+        className={`max-w-[85%] px-5 py-4 rounded-3xl text-sm leading-relaxed relative overflow-hidden transition-all duration-300 ${isUser
+          ? "bg-linear-to-br from-brand-purple to-brand-pink text-white rounded-tr-none shadow-xl shadow-brand-purple/10"
+          : "glass-card text-zinc-200 rounded-tl-none border border-white/5"
+          }`}
       >
         {!isUser && !content && (
-           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-shimmer" 
-                style={{ animation: 'shimmer 2s infinite' }} 
-           />
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-shimmer"
+            style={{ animation: 'shimmer 2s infinite' }}
+          />
         )}
-        
+
         <p className="relative z-10 whitespace-pre-wrap">
           {isUser ? content : displayedContent}
           {!isTypingComplete && !isUser && content && (
-            <motion.span 
+            <motion.span
               animate={{ opacity: [0, 1, 0] }}
               transition={{ repeat: Infinity, duration: 0.8 }}
               className="inline-block w-1.5 h-4 ml-1 bg-brand-purple align-middle"
@@ -96,3 +96,9 @@ export default function MessageBubble({ role, content }: MessageBubbleProps) {
     </motion.div>
   );
 }
+
+
+
+
+
+

@@ -34,7 +34,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-svh w-full px-6 text-center overflow-hidden bg-[#030303] text-white cursor-none">
+    <section className="relative flex flex-col items-center justify-center min-h-svh w-full px-6 text-center overflow-hidden bg-[#030303] text-white">
 
       {/* Layer 0: Performance Grids & Canvas */}
       <CyberGrid />

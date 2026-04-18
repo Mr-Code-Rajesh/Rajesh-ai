@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Menu, X, Search, Terminal, Cpu, Zap, Activity } from "lucide-react";
+import { RiRobot2Line } from "react-icons/ri";
 import CommandPalette from "./CommandPalette";
 
 const navLinks = [
@@ -44,7 +45,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`sticky top-0 w-full z-100 flex justify-center pointer-events-none transition-all duration-500 ${isScrolled
+      <header className={`sticky top-0 w-full z-100000 flex justify-center pointer-events-none transition-all duration-500 ${isScrolled
         ? "bg-linear-to-r from-purple-500/5 via-transparent to-cyan-500/5"
         : "bg-linear-to-r from-black via-purple-300 to-black"
         }`}>
@@ -117,10 +118,10 @@ export default function Navbar() {
 
               {/* Mobile Menu Trigger */}
               <button
-                className="lg:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white"
+                className="lg:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white hover:bg-brand-purple/20 transition-colors"
                 onClick={() => setMobileMenuOpen(true)}
               >
-                <X size={18} />
+                <RiRobot2Line size={20} className="text-[#00D1FF]" />
               </button>
             </div>
           </motion.div>
@@ -134,7 +135,7 @@ export default function Navbar() {
             initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
             animate={{ opacity: 1, backdropFilter: "blur(40px)" }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            className="fixed inset-0 z-110 bg-[#030303]/90 lg:hidden flex flex-col p-10 overflow-hidden"
+            className="fixed inset-0 z-100001 bg-[#030303]/90 lg:hidden flex flex-col p-10 overflow-hidden"
           >
             {/* Background Grid Accent */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">

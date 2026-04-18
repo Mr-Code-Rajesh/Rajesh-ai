@@ -86,7 +86,7 @@ export default function ServicesCaseStudy() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative py-32 px-6 bg-[#030303] text-white overflow-hidden">
+    <section className="relative py-16 md:py-32 px-4 md:px-6 bg-[#030303] text-white overflow-hidden">
       
       {/* Visual Identity Layers */}
       <CyberGrid />
@@ -95,7 +95,7 @@ export default function ServicesCaseStudy() {
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20 border-b border-white/5 pb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 md:mb-20 border-b border-white/5 pb-12">
             <div className="max-w-2xl">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -113,7 +113,7 @@ export default function ServicesCaseStudy() {
                     Technical <span className="text-[#00D1FF]">Service</span> Solutions
                 </motion.h2>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-6 md:gap-8">
                  <TechnicalLabel label="System_Status" value="Optimized" color="text-[#00FF41]" />
                  <TechnicalLabel label="Load_Priority" value="Lvl_01" color="text-[#00D1FF]" />
             </div>
@@ -133,7 +133,7 @@ export default function ServicesCaseStudy() {
                   key={i}
                   onClick={() => setActive(i)}
                   aria-label={`View details for ${service.title}`}
-                  className={`w-full group flex items-start gap-5 p-6 rounded-2xl border transition-all duration-500 text-left relative overflow-hidden
+                  className={`w-full group flex items-start gap-4 md:gap-5 p-5 md:p-6 rounded-2xl border transition-all duration-500 text-left relative overflow-hidden
                     ${isActive 
                         ? "bg-[#00D1FF]/5 border-[#00D1FF]/40 shadow-[0_0_30px_rgba(0,186,255,0.1)]" 
                         : "bg-white/2 border-white/5 hover:border-white/20"}`}
@@ -158,12 +158,12 @@ export default function ServicesCaseStudy() {
 
                     <div className="flex-1">
                         <div className="flex items-center justify-between mb-1">
-                            <h3 className={`text-lg font-bold transition-colors ${isActive ? "text-white" : "text-zinc-400 group-hover:text-white"}`}>
+                            <h3 className={`text-base md:text-lg font-bold transition-colors ${isActive ? "text-white" : "text-zinc-400 group-hover:text-white"}`}>
                                 {service.title}
                             </h3>
                             <ChevronRight className={`w-4 h-4 transition-all duration-300 ${isActive ? "translate-x-0 opacity-100 text-[#00D1FF]" : "-translate-x-2 opacity-0 text-zinc-600"}`} />
                         </div>
-                        <p className="text-xs text-zinc-500 leading-relaxed max-w-[280px]">
+                        <p className="text-[10px] md:text-xs text-zinc-500 leading-relaxed max-w-full md:max-w-[280px]">
                             {service.short}
                         </p>
                     </div>
@@ -196,7 +196,7 @@ export default function ServicesCaseStudy() {
                         className="relative h-full"
                     >
                         {/* The Large Visualization Container */}
-                        <div className="bg-white/2 border border-white/5 rounded-3xl p-8 lg:p-12 relative overflow-hidden backdrop-blur-3xl min-h-[500px]">
+                        <div className="bg-white/2 border border-white/5 rounded-3xl p-6 md:p-8 lg:p-12 relative overflow-hidden backdrop-blur-3xl min-h-fit md:min-h-[500px]">
                             
                             {/* Scanning Light Effect */}
                             <motion.div 
@@ -204,12 +204,12 @@ export default function ServicesCaseStudy() {
                                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                                 className="absolute left-0 right-0 h-20 bg-linear-to-b from-transparent via-[#00D1FF]/10 to-transparent z-20 pointer-events-none"
                             />
-
++
                             {/* Section: Dashboard Header */}
-                            <div className="flex justify-between items-center mb-12 border-b border-white/5 pb-8">
+                            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-6 mb-10 md:mb-12 border-b border-white/5 pb-8">
                                 <div className="space-y-2">
                                     <h4 className="text-zinc-500 font-mono text-[10px] uppercase tracking-[0.4em]">Selected_Vector</h4>
-                                    <h3 className="text-3xl font-black uppercase text-[#00D1FF] leading-none">{services[active].title}</h3>
+                                    <h3 className="text-2xl md:text-3xl font-black uppercase text-[#00D1FF] leading-tight">{services[active].title}</h3>
                                 </div>
                                 <div className="flex items-center gap-6">
                                      <TechnicalLabel label="Metadata_Class" value={services[active].metadata.class} color="text-zinc-400" />
@@ -218,15 +218,15 @@ export default function ServicesCaseStudy() {
                             </div>
 
                             {/* Section: Problem/Solution Grid */}
-                            <div className="space-y-12">
+                            <div className="space-y-10 md:space-y-12">
                                 <section className="relative group">
                                      <div className="flex gap-4 mb-3 items-center">
                                          <div className="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center border border-red-500/20">
                                             <ShieldAlert className="w-4 h-4 text-red-400" />
                                          </div>
-                                         <h5 className="font-mono text-zinc-300 text-xs uppercase tracking-widest">Problem_Assessment</h5>
+                                         <h5 className="font-mono text-zinc-300 text-[10px] md:text-xs uppercase tracking-widest">Problem_Assessment</h5>
                                      </div>
-                                     <p className="text-zinc-400 leading-relaxed pl-12 text-lg">
+                                     <p className="text-zinc-400 leading-relaxed pl-10 md:pl-12 text-base md:text-lg">
                                         {services[active].problem}
                                      </p>
                                 </section>
@@ -236,9 +236,9 @@ export default function ServicesCaseStudy() {
                                          <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
                                             <Lightbulb className="w-4 h-4 text-cyan-400" />
                                          </div>
-                                         <h5 className="font-mono text-zinc-300 text-xs uppercase tracking-widest">Applied_Engineering</h5>
+                                         <h5 className="font-mono text-zinc-300 text-[10px] md:text-xs uppercase tracking-widest">Applied_Engineering</h5>
                                      </div>
-                                     <p className="text-zinc-400 leading-relaxed pl-12 text-lg">
+                                     <p className="text-zinc-400 leading-relaxed pl-10 md:pl-12 text-base md:text-lg">
                                         {services[active].solution}
                                      </p>
                                 </section>
@@ -248,9 +248,9 @@ export default function ServicesCaseStudy() {
                                          <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20">
                                             <Activity className="w-4 h-4 text-green-400" />
                                          </div>
-                                         <h5 className="font-mono text-zinc-300 text-xs uppercase tracking-widest">Performance_Impact</h5>
+                                         <h5 className="font-mono text-zinc-300 text-[10px] md:text-xs uppercase tracking-widest">Performance_Impact</h5>
                                      </div>
-                                     <p className="text-[#00FF41]/70 leading-relaxed pl-12 text-lg font-medium italic">
+                                     <p className="text-[#00FF41]/70 leading-relaxed pl-10 md:pl-12 text-base md:text-lg font-medium italic">
                                         &quot;{services[active].impact}&quot;
                                      </p>
                                 </section>
