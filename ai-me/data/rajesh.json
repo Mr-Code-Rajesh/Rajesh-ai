@@ -157,7 +157,7 @@
       "solution": "Built a headless browser API with rotation logic and AI-based structured formatting.",
       "impact": "Launched 0→1 as a SaaS. Reduced data curation time by 80% for initial users.",
       "status": "LIVE",
-      "link": "https://lucidextractor.vercel.app/",
+      "link": "https://lucidextractor.liceron.in/",
       "github": "https://github.com/Mr-Code-Rajesh"
     },
     {
@@ -175,7 +175,7 @@
       "solution": "Implemented a background job queue (Bull) with LLM grounding (Gemini) for 99% accuracy.",
       "impact": "Production-grade internal tool currently streamlining Zinnov's product research.",
       "status": "PRODUCTION",
-      "link": "https://zinnov.com",
+      "link": "#",
       "github": "https://github.com/Mr-Code-Rajesh"
     },
     {
@@ -192,7 +192,7 @@
       "solution": "Created a lightweight, copy-paste standard with 240+ components and deep animation hooks.",
       "impact": "Open-source contribution with 10k+ potential component variations.",
       "status": "OPEN SOURCE",
-      "link": "https://saktrix.vercel.app/",
+      "link": "https://saktrix-showcase.vercel.app/",
       "github": "https://github.com/Mr-Code-Rajesh/Saktrix-UI"
     },
     {
@@ -226,7 +226,91 @@
       "solution": "Built a JSON-driven widget engine that converts raw logs into prioritized visual tasks.",
       "impact": "Reduced security notification fatigue by filtering non-critical noise by 40%.",
       "status": "COMPLETED",
-      "link": "https://cnapp-dashboard.vercel.app/",
+      "link": "https://dashboard-assignment-peach.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "Saktrix AI UI",
+      "subtitle": "AI-powered UI component library",
+      "description": "An intelligent UI library that allows developers to dynamically customize and generate component designs using AI-driven inputs.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Next.js"
+      ],
+      "problem": "Designing and customizing UI components manually is time-consuming and lacks flexibility.",
+      "solution": "Built an AI-integrated component system that enables real-time design transformation and rapid UI generation.",
+      "impact": "Accelerated UI development speed and improved design flexibility for modern applications.",
+      "status": "IN PROGRESS",
+      "link": "https://saktrix-ai.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "Saktrix Startup Website",
+      "subtitle": "Full-feature startup website demo",
+      "description": "A complete startup website showcasing services, blog integration, email support, and a scalable UI structure for real-world use cases.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Next.js"
+      ],
+      "problem": "Early-stage startups struggle to quickly build professional, feature-rich websites.",
+      "solution": "Developed a production-ready website template with essential features like blog, contact, and responsive UI.",
+      "impact": "Provides a ready-to-use foundation for startups to launch faster with minimal setup.",
+      "status": "LIVE",
+      "link": "https://saktrix.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "Cube Assignment Website",
+      "subtitle": "Pixel-perfect frontend implementation",
+      "description": "A high-precision frontend project built from Figma designs using pure HTML, CSS, and JavaScript without AI assistance.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "problem": "Achieving pixel-perfect UI from design files requires precision and strong frontend fundamentals.",
+      "solution": "Manually developed the entire interface ensuring exact design matching and responsiveness.",
+      "impact": "Delivered a clean, accurate UI implementation demonstrating strong core frontend skills.",
+      "status": "COMPLETED",
+      "link": "https://cube-assignment-liart.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "SaaS Dashboard Store",
+      "subtitle": "Multi-dashboard UI system",
+      "description": "A dashboard platform featuring multiple pre-built layouts including Financial and BI dashboards for analytics and data visualization.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Vite"
+      ],
+      "problem": "Businesses need ready-made dashboard solutions for different data use cases.",
+      "solution": "Created reusable dashboard templates optimized for analytics, financial tracking, and business intelligence.",
+      "impact": "Simplifies dashboard development and reduces time to build data-driven interfaces.",
+      "status": "IN PROGRESS",
+      "link": "https://sass-dashboard-store.vercel.app/",
+      "github": "https://github.com/Mr-Code-Rajesh"
+    },
+    {
+      "name": "Liceron Startup Website",
+      "subtitle": "Official startup platform",
+      "description": "A modern startup website designed to represent the brand, services, and digital presence of Liceron.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Next.js"
+      ],
+      "problem": "Startups need a strong digital presence to establish credibility and attract clients.",
+      "solution": "Built a clean, responsive website with structured content and modern UI design.",
+      "impact": "Strengthened brand identity and improved online visibility for the startup.",
+      "status": "LIVE",
+      "link": "https://liceron.in/",
       "github": "https://github.com/Mr-Code-Rajesh"
     }
   ],

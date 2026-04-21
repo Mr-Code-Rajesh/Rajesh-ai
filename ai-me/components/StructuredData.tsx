@@ -11,13 +11,13 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Rajesh P",
-    "jobTitle": "Senior AI Product Engineer",
+    "jobTitle": "AI Product Engineer",
     "url": "https://rajesh-ai.vercel.app",
     "sameAs": [
-      "https://github.com/rajesh-ai", // Replace with actual
-      "https://linkedin.com/in/rajesh-ai" // Replace with actual
+      "https://github.com/Mr-Code-Rajesh",
+      "https://linkedin.com/in/code-rajesh"
     ],
-    "description": "Senior AI Product Engineer specializing in autonomous agents, LLM applications, and scalable SaaS architecture.",
+    "description": "AI Product Engineer specializing in autonomous agents, LLM applications, and scalable SaaS architecture.",
     "knowsAbout": [
       "Artificial Intelligence",
       "Full Stack Development",
