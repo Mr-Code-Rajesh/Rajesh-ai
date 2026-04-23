@@ -7,6 +7,7 @@ import CursorGlow from "@/components/CursorGlow";
 import StructuredData from "@/components/StructuredData";
 import Preloader from "@/components/Preloader";
 import SystemFeed from "@/components/SystemFeed";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
           {children}
         </main>
         <ConditionalFooter />
+        <Analytics />
       </body>
     </html>
   );
